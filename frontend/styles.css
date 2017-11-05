@@ -1,0 +1,73 @@
+
+.my-navbar {
+    background-color: #1884dd;
+}
+.page {
+    padding: 5rem 5rem 5rem 1rem;
+    height: calc(100vh - 3.5rem);
+}
+.page::after {
+    content: ' ';
+    clear: both;
+}
+.side-panel {
+    float: left;
+    border-right: 1px solid #777777;
+    text-align: right;
+    width: 30%;
+    height: 100%;
+}
+.side-panel ul {
+    display: inline-block;
+    margin-left: auto;
+}
+.service-item {
+    list-style-type: none;
+    border-radius: 10px;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+.service-item:hover {
+    background-color: lightgray;
+}
+.service-item h4 {
+    font-weight: normal;
+}
+.service-available h4::after {
+    display: inline-block;
+    margin-left: 0.5rem;
+    content: '●';
+    color: #28a745;
+}
+.service-info h4::after {
+    display: inline-block;
+    margin-left: 0.5rem;
+    content: '●';
+    color: #17a2b8;
+}
+.service-warning h4::after {
+    display: inline-block;
+    margin-left: 0.5rem;
+    content: '●';
+    color: #ffc107;
+}
+.service-status {
+    text-align: left;
+}
+.main {
+    display: inline-block;
+    width: 70%;
+    height: 100%;
+}
+table td.shrink {
+    white-space:nowrap;
+}
+table td.expand {
+    width: 99%;
+}
+.properties {
+    width: 100%;
+}
+.properties td {
+    padding: 0.5rem;
+}

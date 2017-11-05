@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>硬件资源池</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark my-navbar">
+        <a class="navbar-brand" href="#">Autocontainerd 控制面板</a>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active" id="tab-0">
+                <a class="nav-link" href="javascript:s(0)">硬件资源池</a>
+            </li>
+            <li class="nav-item" id="tab-1">
+                <a class="nav-link" href="javascript:s(1)">用户组</a>
+            </li>
+            <li class="nav-item" id="tab-2">
+                <a class="nav-link" href="javascript:s(2)">实例管理</a>
+            </li>
+            <li class="nav-item" id="tab-3">
+                <a class="nav-link" href="javascript:s(3)">测试</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav navbar-right">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">用户中心</a>
+                <ul class="dropdown-menu" style="margin-left: -4rem">
+                    <li><a class="dropdown-item" href="javascript:u(0)">切换为管理员</a></li>
+                    <li><a class="dropdown-item" href="javascript:u(1)">切换为老师</a></li>
+                    <li><a class="dropdown-item" href="javascript:u(2)">切换为学生</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div style="height: 3.5rem"></div>
+
+    <div class="page" id="page-0">
+        <div class="side-panel">
+            <ul>
+                <li class="service-item service-available">
+                    <h4>QingCloud 服务器 #1</h4>
+                    <div class="service-status">
+                        资源占用：67%<br />
+                        资源分配：90%
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="main">
+            <table class="properties">
+                <tr>
+                    <td class="text-right shrink">IP 地址</td>
+                    <td class="expand"><code>fdb2:7f6:357f:9579::1</code></td>
+                </tr>
+                <tr>
+                    <td class="text-right shrink">CPU</td>
+                    <td class="expand">
+                        <div class="progress">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 23%">已使用 23%</div>
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 52%">已分配 75%</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-right shrink">内存</td>
+                    <td class="expand">
+                        <div class="progress">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 67%">已使用 67%</div>
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 23%">已分配 90%</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-right shrink">独占系统盘</td>
+                    <td class="expand">
+                        <div class="progress">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 12%">已使用 12%</div>
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 18%">已分配 30%</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-right shrink">共享数据盘</td>
+                    <td class="expand">
+                        <div class="progress">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 15%">已使用 15%</div>
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 18%">已分配 30%</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-right shrink">分配到用户组</td>
+                    <td class="expand">
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Linux 运维 1 班</button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Linux 运维 1 班</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="page" id="page-1">
+        <div class="side-panel">
+            <ul>
+                <li class="service-item service-info">
+                    <h4>Linux 运维 1 班</h4>
+                    <div class="service-status">
+                        用户数量：10
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="main">
+            <table class="properties">
+                <tr>
+                    <td class="text-right shrink">用户数量</td>
+                    <td class="expand">10</td>
+                </tr>
+                <tr>
+                    <td class="text-right shrink">资源池</td>
+                    <td class="expand">
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">QingCloud 服务器 #1</button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">QingCloud 服务器 #1</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="align-top text-right shrink">用户列表</td>
+                    <td class="expand">
+                        <div style="height: 20rem; overflow: auto">
+                            <table class="table table-striped table-hover">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <td scope="col" class="shrink text-right">ID</td>
+                                        <td scope="col" class="expand">用户名</td>
+                                        <td scope="col" class=shrink></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="shrink text-right">19881</td>
+                                        <td class="expand">兰秀顺</td>
+                                        <td class="shrink"><a href="#" class="btn btn-info">管理</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="shrink text-right">15991</td>
+                                        <td class="expand">杨玉情</td>
+                                        <td class="shrink"><a href="#" class="btn btn-info">管理</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="shrink text-right">11508</td>
+                                        <td class="expand">陈光松</td>
+                                        <td class="shrink"><a href="#" class="btn btn-info">管理</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="shrink text-right">14475</td>
+                                        <td class="expand">吴安奇</td>
+                                        <td class="shrink"><a href="#" class="btn btn-info">管理</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="shrink text-right">15829</td>
+                                        <td class="expand">谢陈瀚</td>
+                                        <td class="shrink"><a href="#" class="btn btn-info">管理</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="shrink text-right">16712</td>
+                                        <td class="expand">李小芝</td>
+                                        <td class="shrink"><a href="#" class="btn btn-info">管理</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="shrink text-right">14685</td>
+                                        <td class="expand">薛曼操</td>
+                                        <td class="shrink"><a href="#" class="btn btn-info">管理</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="shrink text-right">14478</td>
+                                        <td class="expand">宋建慧</td>
+                                        <td class="shrink"><a href="#" class="btn btn-info">管理</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="shrink text-right">12493</td>
+                                        <td class="expand">韩洪媚</td>
+                                        <td class="shrink"><a href="#" class="btn btn-info">管理</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="shrink text-right">17614</td>
+                                        <td class="expand">李致平</td>
+                                        <td class="shrink"><a href="#" class="btn btn-info">管理</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="page" id="page-2">
+        <div class="side-panel">
+            <ul>
+                <li class="service-item service-available">
+                    <h4>容器实例 #1</h4>
+                    <div class="service-status">
+                        资源占用：67%<br />
+                        资源分配：90%
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="main">
+            <table class="properties">
+                <tr>
+                    <td class="text-right shrink">IP 地址</td>
+                    <td class="expand"><code>fdb2:7f6:357f:9579:16:3eff:feb8:fab8</code></td>
+                </tr>
+                <tr>
+                    <td class="text-right shrink">CPU</td>
+                    <td class="expand">
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 2em">2%</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-right shrink">内存</td>
+                    <td class="expand">
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 14%">14%</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-right shrink">独立系统盘</td>
+                    <td class="expand">
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 53%">53%</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-right shrink">共享数据盘</td>
+                    <td class="expand">
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 8%">8%</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-right shrink">实例操作</td>
+                    <td class="expand">
+                        <a class="btn btn-primary" href="#">控制台</a>
+                        <a class="btn btn-info" href="#">停止</a>
+                        <a class="btn btn-info" href="#">重启</a>
+                        <a class="btn btn-danger" href="#">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-right shrink">日志操作</td>
+                    <td class="expand">
+                        <a class="btn btn-info" href="#">导出文本</a>
+                        <a class="btn btn-info" href="#">导出 Dockerfile</a>
+                        <a class="btn btn-success" href="#">提交作业</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="page" id="page-3">
+        <div class="side-panel" style="height: 50%">
+            <ul>
+                <li class="service-item service-warning">
+                    <h4>手动批改</h4>
+                </li>
+            </ul>
+        </div>
+        <div class="main" style="height: 50%">
+            <table class="properties">
+                <tr>
+                    <td class="align-top text-right shrink">待批作业</td>
+                    <td class="expand">
+                        <div style="width: 40rem">
+                            <table class="table table-striped table-hover">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <td scope="col" class="shrink text-right">ID</td>
+                                        <td scope="col" class="expand">用户名</td>
+                                        <td scope="col" class=shrink>操作</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="shrink text-right">14475</td>
+                                        <td class="expand">吴安奇</td>
+                                        <td class="shrink"><a href="#" class="btn btn-info">批复</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="shrink text-right">14685</td>
+                                        <td class="expand">薛曼操</td>
+                                        <td class="shrink"><a href="#" class="btn btn-info">批复</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div style="clear: both"></div>
+        <div class="side-panel" style="height: 50%">
+            <ul>
+                <li class="service-item service-available">
+                    <h4>自动测试</h4>
+                </li>
+            </ul>
+        </div>
+        <div class="main" style="height: 50%">
+            <table class="properties">
+                <tr>
+                    <td class="text-right shrink">类型</td>
+                    <td class="expand">
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">自动集成测试</button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">自动集成测试</a></li>
+                                <li><a class="dropdown-item" href="#">日志匹配测试</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-right shrink">操作</td>
+                    <td class="expand">
+                        <a class="btn btn-info" href="#">编辑脚本</a>
+                        <a class="btn btn-success" href="#">执行测试</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="app.js" charset="utf-8"></script>
+</body>
+</html>
