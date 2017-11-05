@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700');
 @import 'font.css';
 
+body {
+  background-color: black;
+}
+
 .terminal {
   box-sizing: border-box;
   position: fixed;
