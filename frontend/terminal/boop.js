@@ -79,8 +79,8 @@ function findGetParameter(parameterName) {
 
     Terminal.init(document.body, {
       commands: commands,
-      prompt: '\\u@' + findGetParameter("container") + '~$ ',
-      intro: '<p>Welcome to autocontainerd. </p>'
+      prompt: '\\u@' + findGetParameter("container") + ':~$ ',
+      intro: '<p>Welcome to autocontainerd. </p><p><br></p>'
     })
   }
 
