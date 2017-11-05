@@ -43,7 +43,7 @@
                 <li class="service-item service-available">
                     <h4>QingCloud 服务器 #1</h4>
                     <div class="service-status">
-                        资源占用：67%<br />
+                        <span id="tot-1">资源占用：67%</span><br />
                         资源分配：90%
                     </div>
                 </li>
@@ -59,8 +59,8 @@
                     <td class="text-right shrink">CPU</td>
                     <td class="expand">
                         <div class="progress">
-                            <div class="progress-bar bg-info" role="progressbar" style="width: 23%">已使用 23%</div>
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 52%">已分配 75%</div>
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 23%" id="val-0">已使用 23%</div>
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 52%" id="rem-0">已分配 75%</div>
                         </div>
                     </td>
                 </tr>
@@ -68,8 +68,8 @@
                     <td class="text-right shrink">内存</td>
                     <td class="expand">
                         <div class="progress">
-                            <div class="progress-bar bg-info" role="progressbar" style="width: 67%">已使用 67%</div>
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 23%">已分配 90%</div>
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 67%" id="val-1">已使用 67%</div>
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 23%" id="rem-1">已分配 90%</div>
                         </div>
                     </td>
                 </tr>
@@ -106,7 +106,7 @@
         </div>
     </div>
 
-    <div class="page" id="page-1">
+    <div class="page collapse" id="page-1">
         <div class="side-panel">
             <ul>
                 <li class="service-item service-info">
@@ -206,20 +206,27 @@
         </div>
     </div>
 
-    <div class="page" id="page-2">
+    <div class="page collapse" id="page-2">
         <div class="side-panel">
             <ul>
                 <li class="service-item service-available">
                     <h4>容器实例 #1</h4>
                     <div class="service-status">
-                        资源占用：67%<br />
-                        资源分配：90%
+                        资源占用：53%
                     </div>
                 </li>
             </ul>
         </div>
         <div class="main">
             <table class="properties">
+                <tr>
+                    <td class="text-right shrink">硬件资源池</td>
+                    <td class="expand">QingCloud 服务器 #1</td>
+                </tr>
+                <tr>
+                    <td class="text-right shrink">Docker 容器编号</td>
+                    <td class="expand"><code>7ecf50d86061</code></td>
+                </tr>
                 <tr>
                     <td class="text-right shrink">IP 地址</td>
                     <td class="expand"><code>fdb2:7f6:357f:9579:16:3eff:feb8:fab8</code></td>
@@ -228,7 +235,7 @@
                     <td class="text-right shrink">CPU</td>
                     <td class="expand">
                         <div class="progress">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 2em">2%</div>
+                            <div class="progress-bar bg-success" role="progressbar" style="min-width: 2em" id="val-2">2%</div>
                         </div>
                     </td>
                 </tr>
@@ -236,7 +243,7 @@
                     <td class="text-right shrink">内存</td>
                     <td class="expand">
                         <div class="progress">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 14%">14%</div>
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 14%" id="val-3">14%</div>
                         </div>
                     </td>
                 </tr>
@@ -259,7 +266,7 @@
                 <tr>
                     <td class="text-right shrink">实例操作</td>
                     <td class="expand">
-                        <a class="btn btn-primary" href="#">控制台</a>
+                        <a class="btn btn-primary" href="terminal/?container=7ecf50d86061" target="_blank">控制台</a>
                         <a class="btn btn-info" href="#">停止</a>
                         <a class="btn btn-info" href="#">重启</a>
                         <a class="btn btn-danger" href="#">删除</a>
@@ -277,7 +284,7 @@
         </div>
     </div>
 
-    <div class="page" id="page-3">
+    <div class="page collapse" id="page-3">
         <div class="side-panel" style="height: 50%">
             <ul>
                 <li class="service-item service-warning">
