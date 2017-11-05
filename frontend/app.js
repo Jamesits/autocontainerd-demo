@@ -9,7 +9,7 @@ function s(n) {
     }
     setTimeout(function() {
         $("#page-" + n).show();
-    }, Math.random() * 300 + 200);
+    }, Math.random() * Math.random() * 500 + 250);
 }
 
 function u(n) {
