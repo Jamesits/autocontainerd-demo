@@ -30,7 +30,7 @@ function findGetParameter(parameterName) {
   var state = {}
 
   commands.ls = function (args) {
-    return "homework test"
+    return "homework        test"
   }
 
   commands.echo = function (args) {
@@ -79,7 +79,7 @@ function findGetParameter(parameterName) {
 
     Terminal.init(document.body, {
       commands: commands,
-      prompt: '\\u@' + findGetParameter("container") + ' $ ',
+      prompt: '\\u@' + findGetParameter("container") + '~$ ',
       intro: '<p>Welcome to autocontainerd. </p>'
     })
   }

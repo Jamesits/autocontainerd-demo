@@ -34,6 +34,10 @@ function u(n) {
     }
 }
 
+function t(n) {
+    window.open("terminal/?container=" + n, "terminal", "width=640,height=480,menubar=0,toolbar=0,personalbar=0,status=0");
+}
+
 setInterval(function() {
     var val0 = Math.floor(Math.random() * 3 + 22);
     $("#val-0").text("已使用 " + val0 + "%");
